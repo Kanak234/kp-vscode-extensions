@@ -160,6 +160,8 @@
     "vitest": "^1.0.0",
     "@vitest/coverage-v8": "^1.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@kanak-prabhakar/shared": "workspace:*"
+  },
   "icon": "images/icon.png"
 }
