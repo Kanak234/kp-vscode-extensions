@@ -1,0 +1,112 @@
+{
+  "name": "kp-kalpa",
+  "displayName": "KP Kalpa \u2014 Code Time Machine",
+  "description": "A visual history explorer for code that integrates with Git. Inspect previous versions, changed lines, added/removed code, and modified functions. Never automatically overwrites user files; destructive restore requires explicit confirmation.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "git",
+    "history",
+    "timeline",
+    "version",
+    "code explorer",
+    "restore"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kanak-prabhakar/vscode-extensions",
+    "directory": "packages/kalpa"
+  },
+  "bugs": {
+    "url": "https://github.com/kanak-prabhakar/vscode-extensions/issues"
+  },
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "kalpa.openTimeline",
+        "title": "Kalpa: Open Timeline",
+        "category": "Kalpa"
+      },
+      {
+        "command": "kalpa.compareVersion",
+        "title": "Kalpa: Compare Version",
+        "category": "Kalpa"
+      },
+      {
+        "command": "kalpa.restorePreview",
+        "title": "Kalpa: Restore Preview",
+        "category": "Kalpa"
+      },
+      {
+        "command": "kalpa.diffLines",
+        "title": "Kalpa: Diff Lines",
+        "category": "Kalpa"
+      }
+    ],
+    "configuration": {
+      "title": "Kalpa",
+      "properties": {
+        "kalpa.enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable Kalpa code time machine"
+        },
+        "kalpa.timeline.autoscroll": {
+          "type": "boolean",
+          "default": true,
+          "description": "Autoscroll timeline"
+        },
+        "kalpa.restore.confirm": {
+          "type": "boolean",
+          "default": true,
+          "description": "Confirm destructive restore operations"
+        }
+      }
+    },
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "kalpa.openTimeline",
+          "when": "kalpa.enabled"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "kalpa.openTimeline",
+          "group": "kalpa",
+          "when": "kalpa.enabled"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run build",
+    "build": "esbuild src/extension.ts --bundle --outfile=dist/extension.js --external:vscode --format=cjs --platform=node",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "package": "vsce package --no-dependencies --skip-license",
+    "clean": "rm -rf dist *.vsix"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^2.22.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0",
+    "@vitest/coverage-v8": "^1.0.0"
+  },
+  "dependencies": {
+    "@kanak-prabhakar/shared": "workspace:*"
+  },
+  "publisher": "KANAKPRABHAKAR"
+}

@@ -1,0 +1,25 @@
+node_modules/
+__pycache__/
+*.pyc
+.env
+.env.*
+!*.env.example
+*.pem
+*.key
+credentials*
+venv/
+.venv/
+target/
+dist/
+build/
+*.gguf
+*.pt
+*.safetensors
+
+# local test/dev tooling downloads, not project source
+test-harness/
+.vscode-test/
+VSCode-linux-x64/
+1.85.0-stable.tar.gz
+114.0.5735.90-chromedriver_linux64.zip
+driverVersion

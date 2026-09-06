@@ -1,0 +1,41 @@
+{
+  "name": "kanak-prabhakar-vscode-extensions",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CS Student Developer Tool Ecosystem - 15 Independent VS Code Extensions",
+  "author": "Kanak Prabhakar",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "pnpm run build:shared",
+    "build": "pnpm -r run build",
+    "build:shared": "pnpm --filter @kanak-prabhakar/shared run build",
+    "build:all": "pnpm -r run build",
+    "lint": "pnpm -r run lint",
+    "lint:fix": "pnpm -r run lint:fix",
+    "typecheck": "pnpm -r run typecheck",
+    "test": "pnpm -r run test",
+    "test:coverage": "pnpm -r run test:coverage",
+    "package:all": "pnpm -r run package",
+    "clean": "pnpm -r run clean && rm -rf node_modules",
+    "release:check": "node scripts/release-check.js"
+  },
+  "devDependencies": {
+    "@types/ajv": "^0.0.5",
+    "@types/node": "^20.10.0",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^2.22.0",
+    "esbuild": "^0.28.2",
+    "eslint": "^8.55.0",
+    "prettier": "^3.1.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.10.0",
+  "dependencies": {
+    "ajv-formats": "^3.0.1"
+  }
+}

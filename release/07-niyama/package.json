@@ -1,0 +1,119 @@
+{
+  "name": "niyama",
+  "displayName": "Niyama \u2014 Developer Control Center",
+  "description": "A graphical command center inside VS Code with searchable interface for commands, tasks, scripts, debugging, testing, Git actions, extension commands, and workspace actions. Features search, favorites, recent, keyboard shortcut, and command groups.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "command-center",
+    "search",
+    "tasks",
+    "scripts",
+    "debug",
+    "testing",
+    "git"
+  ],
+  "icon": "assets/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kanak-prabhakar/vscode-extensions",
+    "directory": "packages/niyama"
+  },
+  "bugs": {
+    "url": "https://github.com/kanak-prabhakar/vscode-extensions/issues"
+  },
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "niyama.openControlCenter",
+        "title": "Niyama: Open Control Center",
+        "category": "Niyama"
+      },
+      {
+        "command": "niyama.searchCommands",
+        "title": "Niyama: Search Commands",
+        "category": "Niyama"
+      },
+      {
+        "command": "niyama.favoriteToggle",
+        "title": "Niyama: Toggle Favorite",
+        "category": "Niyama"
+      },
+      {
+        "command": "niyama.recentClear",
+        "title": "Niyama: Clear Recent",
+        "category": "Niyama"
+      }
+    ],
+    "configuration": {
+      "title": "Niyama",
+      "properties": {
+        "niyama.enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable Niyama developer control center"
+        },
+        "niyama.search.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable command search"
+        },
+        "niyama.favorites.max": {
+          "type": "number",
+          "default": 10,
+          "description": "Maximum number of favorites"
+        },
+        "niyama.keyboard.shortcut": {
+          "type": "string",
+          "default": "Ctrl+Shift+P",
+          "description": "Keyboard shortcut for control center"
+        }
+      }
+    },
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "niyama.openControlCenter",
+          "when": "niyama.enabled"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "niyama.openControlCenter",
+          "group": "niyama",
+          "when": "niyama.enabled"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run build",
+    "build": "tsc -p tsconfig.json",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "package": "vsce package --no-dependencies",
+    "clean": "rm -rf dist *.vsix"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^2.22.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0",
+    "@vitest/coverage-v8": "^1.0.0"
+  },
+  "dependencies": {
+    "@kanak-prabhakar/shared": "workspace:*"
+  },
+  "publisher": "kanak-prabhakar"
+}
