@@ -1,0 +1,71 @@
+{
+  "name": "kp-samarpana",
+  "displayName": "KP Samarpana \u2014 Assignment Submission Manager",
+  "description": "Student assignment submission, grading check, and feedback manager.",
+  "version": "1.0.0",
+  "publisher": "KANAKPRABHAKAR",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "samarpana",
+    "kanak-prabhakar",
+    "vs-code-extension"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kanak-prabhakar/vscode-extensions"
+  },
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "samarpana.submitAssignment",
+        "title": "Samarpana: Submit Assignment",
+        "category": "Samarpana"
+      },
+      {
+        "command": "samarpana.openDashboard",
+        "title": "Samarpana: Open Dashboard",
+        "category": "Samarpana"
+      }
+    ],
+    "configuration": {
+      "title": "Samarpana",
+      "properties": {
+        "samarpana.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable Samarpana features"
+        },
+        "samarpana.targetEndpoint": {
+          "type": "string",
+          "default": "http://localhost:8080/submit",
+          "description": "Configuration setting for targetEndpoint"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run build",
+    "build": "esbuild src/extension.ts --bundle --outfile=dist/extension.js --external:vscode --format=cjs --platform=node",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "package": "vsce package --no-dependencies --skip-license",
+    "clean": "rm -rf dist *.vsix"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^2.22.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  },
+  "dependencies": {
+    "@kanak-prabhakar/shared": "workspace:*"
+  }
+}

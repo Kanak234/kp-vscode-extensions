@@ -1,0 +1,554 @@
+{
+  "adhikarana": {
+    "name": "adhikarana",
+    "isExtension": true,
+    "version": "1.0.0",
+    "dependencies": {
+      "@kanak-prabhakar/shared": "workspace:*",
+      "minimatch": "^10.2.6"
+    },
+    "devDependencies": {
+      "@types/minimatch": "^6.0.0",
+      "@types/node": "^20.10.0",
+      "@types/vscode": "^1.85.0",
+      "@vscode/vsce": "^2.22.0",
+      "typescript": "^5.3.0",
+      "vitest": "^1.0.0"
+    },
+    "commands": [
+      "adhikarana.checkPermissions",
+      "adhikarana.openDashboard"
+    ],
+    "webviews": false,
+    "treeviews": false,
+    "hasTests": true
+  },
+  "anumana": {
+    "name": "anumana",
+    "isExtension": true,
+    "version": "1.0.0",
+    "dependencies": {
+      "@kanak-prabhakar/shared": "workspace:*"
+    },
+    "devDependencies": {
+      "@types/node": "^20.10.0",
+      "@types/vscode": "^1.85.0",
+      "@vscode/vsce": "^2.22.0",
+      "typescript": "^5.3.0",
+      "vitest": "^1.0.0"
+    },
+    "commands": [
+      "anumana.infer",
+      "anumana.openDashboard"
+    ],
+    "webviews": false,
+    "treeviews": false,
+    "hasTests": true
+  },
+  "avalokana": {
+    "name": "avalokana",
+    "isExtension": true,
+    "version": "1.0.0",
+    "dependencies": {
+      "@kanak-prabhakar/shared": "workspace:*"
+    },
+    "devDependencies": {
+      "@types/node": "^20.10.0",
+      "@types/vscode": "^1.85.0",
+      "@vscode/vsce": "^2.22.0",
+      "typescript": "^5.3.0",
+      "vitest": "^1.0.0"
+    },
+    "commands": [
+      "avalokana.analyzeMetrics",
+      "avalokana.openDashboard"
+    ],
+    "webviews": false,
+    "treeviews": false,
+    "hasTests": true
+  },
+  "darshana": {
+    "name": "darshana",
+    "isExtension": true,
+    "version": "1.0.0",
+    "dependencies": {
+      "@kanak-prabhakar/shared": "workspace:*"
+    },
+    "devDependencies": {
+      "@types/node": "^20.10.0",
+      "@types/vscode": "^1.85.0",
+      "@vscode/vsce": "^2.22.0",
+      "typescript": "^5.3.0",
+      "vitest": "^1.0.0"
+    },
+    "commands": [
+      "darshana.showAst",
+      "darshana.openDashboard"
+    ],
+    "webviews": false,
+    "treeviews": false,
+    "hasTests": true
+  },
+  "ganitha": {
+    "name": "ganitha",
+    "isExtension": true,
+    "version": "1.0.0",
+    "dependencies": {
+      "@kanak-prabhakar/shared": "workspace:*"
+    },
+    "devDependencies": {
+      "@types/node": "^20.10.0",
+      "@types/vscode": "^1.85.0",
+      "@vscode/vsce": "^2.22.0",
+      "typescript": "^5.3.0",
+      "vitest": "^1.0.0"
+    },
+    "commands": [
+      "ganitha.evaluateExpression",
+      "ganitha.openDashboard"
+    ],
+    "webviews": false,
+    "treeviews": false,
+    "hasTests": true
+  },
+  "kalpa": {
+    "name": "kalpa",
+    "isExtension": true,
+    "version": "1.0.0",
+    "dependencies": {
+      "@kanak-prabhakar/shared": "workspace:*"
+    },
+    "devDependencies": {
+      "@types/node": "^20.10.0",
+      "@types/vscode": "^1.85.0",
+      "@vscode/vsce": "^2.22.0",
+      "typescript": "^5.3.0",
+      "vitest": "^1.0.0",
+      "@vitest/coverage-v8": "^1.0.0"
+    },
+    "commands": [
+      "kalpa.openTimeline",
+      "kalpa.compareVersion",
+      "kalpa.restorePreview",
+      "kalpa.diffLines"
+    ],
+    "webviews": false,
+    "treeviews": false,
+    "hasTests": true
+  },
+  "kridaya": {
+    "name": "kridaya",
+    "isExtension": true,
+    "version": "1.0.0",
+    "dependencies": {
+      "@kanak-prabhakar/shared": "workspace:*"
+    },
+    "devDependencies": {
+      "@types/node": "^20.10.0",
+      "@types/vscode": "^1.85.0",
+      "@vscode/vsce": "^2.22.0",
+      "typescript": "^5.3.0",
+      "vitest": "^1.0.0",
+      "@vitest/coverage-v8": "^1.0.0"
+    },
+    "commands": [
+      "kridaya.startPlayground",
+      "kridaya.toggleEffects",
+      "kridaya.configureEffects"
+    ],
+    "webviews": false,
+    "treeviews": false,
+    "hasTests": true
+  },
+  "kriyasala": {
+    "name": "kriyasala",
+    "isExtension": true,
+    "version": "1.0.0",
+    "dependencies": {
+      "@kanak-prabhakar/shared": "workspace:*"
+    },
+    "devDependencies": {
+      "@types/node": "^20.10.0",
+      "@types/vscode": "^1.85.0",
+      "@vscode/vsce": "^2.22.0",
+      "typescript": "^5.3.0",
+      "vitest": "^1.0.0",
+      "@vitest/coverage-v8": "^1.0.0"
+    },
+    "commands": [
+      "kriyasala.execute",
+      "kriyasala.openDashboard",
+      "kriyasala.stopExecution",
+      "kriyasala.restartExecution"
+    ],
+    "webviews": true,
+    "treeviews": true,
+    "hasTests": true
+  },
+  "niyama": {
+    "name": "niyama",
+    "isExtension": true,
+    "version": "1.0.0",
+    "dependencies": {
+      "@kanak-prabhakar/shared": "workspace:*"
+    },
+    "devDependencies": {
+      "@types/node": "^20.10.0",
+      "@types/vscode": "^1.85.0",
+      "@vscode/vsce": "^2.22.0",
+      "typescript": "^5.3.0",
+      "vitest": "^1.0.0",
+      "@vitest/coverage-v8": "^1.0.0"
+    },
+    "commands": [
+      "niyama.openControlCenter",
+      "niyama.searchCommands",
+      "niyama.favoriteToggle",
+      "niyama.recentClear"
+    ],
+    "webviews": false,
+    "treeviews": false,
+    "hasTests": true
+  },
+  "pariksha": {
+    "name": "pariksha",
+    "isExtension": true,
+    "version": "1.0.0",
+    "dependencies": {
+      "@kanak-prabhakar/shared": "workspace:*"
+    },
+    "devDependencies": {
+      "@types/node": "^20.10.0",
+      "@types/vscode": "^1.85.0",
+      "@vscode/vsce": "^2.22.0",
+      "typescript": "^5.3.0",
+      "vitest": "^1.0.0"
+    },
+    "commands": [
+      "pariksha.runTests",
+      "pariksha.openDashboard"
+    ],
+    "webviews": true,
+    "treeviews": true,
+    "hasTests": true
+  },
+  "prayoga": {
+    "name": "prayoga",
+    "isExtension": true,
+    "version": "1.0.0",
+    "dependencies": {
+      "@kanak-prabhakar/shared": "workspace:*"
+    },
+    "devDependencies": {
+      "@types/node": "^20.10.0",
+      "@types/vscode": "^1.85.0",
+      "@vscode/vsce": "^2.22.0",
+      "typescript": "^5.3.0",
+      "vitest": "^1.0.0",
+      "@vitest/coverage-v8": "^1.0.0"
+    },
+    "commands": [
+      "prayoga.runExperiment",
+      "prayoga.resetExperiment",
+      "prayoga.compareResults",
+      "prayoga.visualizeExperiment",
+      "prayoga.exportExperiment"
+    ],
+    "webviews": false,
+    "treeviews": false,
+    "hasTests": true
+  },
+  "rachana": {
+    "name": "rachana",
+    "isExtension": true,
+    "version": "1.0.0",
+    "dependencies": {
+      "@kanak-prabhakar/shared": "workspace:*"
+    },
+    "devDependencies": {
+      "@types/node": "^20.10.0",
+      "@types/vscode": "^1.85.0",
+      "@vscode/vsce": "^2.22.0",
+      "typescript": "^5.3.0",
+      "vitest": "^1.0.0"
+    },
+    "commands": [
+      "rachana.createProject",
+      "rachana.openDashboard"
+    ],
+    "webviews": false,
+    "treeviews": false,
+    "hasTests": true
+  },
+  "samarpana": {
+    "name": "samarpana",
+    "isExtension": true,
+    "version": "1.0.0",
+    "dependencies": {
+      "@kanak-prabhakar/shared": "workspace:*"
+    },
+    "devDependencies": {
+      "@types/node": "^20.10.0",
+      "@types/vscode": "^1.85.0",
+      "@vscode/vsce": "^2.22.0",
+      "typescript": "^5.3.0",
+      "vitest": "^1.0.0"
+    },
+    "commands": [
+      "samarpana.submitAssignment",
+      "samarpana.openDashboard"
+    ],
+    "webviews": false,
+    "treeviews": false,
+    "hasTests": true
+  },
+  "sambandha": {
+    "name": "sambandha",
+    "isExtension": true,
+    "version": "1.0.0",
+    "dependencies": {
+      "@kanak-prabhakar/shared": "workspace:*"
+    },
+    "devDependencies": {
+      "@types/node": "^20.10.0",
+      "@types/vscode": "^1.85.0",
+      "@vscode/vsce": "^2.22.0",
+      "typescript": "^5.3.0",
+      "vitest": "^1.0.0"
+    },
+    "commands": [
+      "sambandha.startSession",
+      "sambandha.openDashboard"
+    ],
+    "webviews": false,
+    "treeviews": false,
+    "hasTests": true
+  },
+  "samvada": {
+    "name": "samvada",
+    "isExtension": true,
+    "version": "1.0.0",
+    "dependencies": {
+      "@kanak-prabhakar/shared": "workspace:*"
+    },
+    "devDependencies": {
+      "@types/node": "^20.10.0",
+      "@types/vscode": "^1.85.0",
+      "@vscode/vsce": "^2.22.0",
+      "typescript": "^5.3.0",
+      "vitest": "^1.0.0"
+    },
+    "commands": [
+      "samvada.openChat",
+      "samvada.openDashboard"
+    ],
+    "webviews": false,
+    "treeviews": false,
+    "hasTests": true
+  },
+  "shared": {
+    "name": "@kanak-prabhakar/shared",
+    "isExtension": false,
+    "version": "1.0.0",
+    "dependencies": {
+      "ajv": "^8.12.0",
+      "ajv-formats": "^2.1.1"
+    },
+    "devDependencies": {
+      "@types/node": "^20.10.0",
+      "@types/vscode": "^1.85.0",
+      "typescript": "^5.3.0",
+      "vitest": "^1.0.0",
+      "@vitest/coverage-v8": "^1.0.0"
+    },
+    "commands": [],
+    "webviews": false,
+    "treeviews": false,
+    "hasTests": true
+  },
+  "siddhi": {
+    "name": "siddhi",
+    "isExtension": true,
+    "version": "1.0.0",
+    "dependencies": {
+      "@kanak-prabhakar/shared": "workspace:*"
+    },
+    "devDependencies": {
+      "@types/node": "^20.10.0",
+      "@types/vscode": "^1.85.0",
+      "@vscode/vsce": "^2.22.0",
+      "typescript": "^5.3.0",
+      "vitest": "^1.0.0",
+      "@vitest/coverage-v8": "^1.0.0"
+    },
+    "commands": [
+      "siddhi.viewAchievements",
+      "siddhi.resetProgress",
+      "siddhi.exportHistory"
+    ],
+    "webviews": false,
+    "treeviews": false,
+    "hasTests": true
+  },
+  "svasthya": {
+    "name": "svasthya",
+    "isExtension": true,
+    "version": "1.0.0",
+    "dependencies": {
+      "@kanak-prabhakar/shared": "workspace:*"
+    },
+    "devDependencies": {
+      "@types/node": "^20.10.0",
+      "@types/vscode": "^1.85.0",
+      "@vscode/vsce": "^2.22.0",
+      "typescript": "^5.3.0",
+      "vitest": "^1.0.0"
+    },
+    "commands": [
+      "svasthya.checkHealth",
+      "svasthya.openDashboard"
+    ],
+    "webviews": true,
+    "treeviews": true,
+    "hasTests": true
+  },
+  "tantra": {
+    "name": "tantra",
+    "isExtension": true,
+    "version": "1.0.0",
+    "dependencies": {
+      "@kanak-prabhakar/shared": "workspace:*"
+    },
+    "devDependencies": {
+      "@types/node": "^20.10.0",
+      "@types/vscode": "^1.85.0",
+      "@vscode/vsce": "^2.22.0",
+      "typescript": "^5.3.0",
+      "vitest": "^1.0.0"
+    },
+    "commands": [
+      "tantra.generateCode",
+      "tantra.openDashboard"
+    ],
+    "webviews": false,
+    "treeviews": false,
+    "hasTests": true
+  },
+  "vibhrama": {
+    "name": "vibhrama",
+    "isExtension": true,
+    "version": "1.0.0",
+    "dependencies": {
+      "@kanak-prabhakar/shared": "workspace:*"
+    },
+    "devDependencies": {
+      "@types/node": "^20.10.0",
+      "@types/vscode": "^1.85.0",
+      "@vscode/vsce": "^2.22.0",
+      "typescript": "^5.3.0",
+      "vitest": "^1.0.0",
+      "@vitest/coverage-v8": "^1.0.0"
+    },
+    "commands": [
+      "vibhrama.analyze",
+      "vibhrama.toggleSimulation",
+      "vibhrama.mode actual",
+      "vibhrama.mode simulated"
+    ],
+    "webviews": false,
+    "treeviews": false,
+    "hasTests": true
+  },
+  "vivida": {
+    "name": "vivida",
+    "isExtension": true,
+    "version": "1.0.0",
+    "dependencies": {
+      "@kanak-prabhakar/shared": "workspace:*"
+    },
+    "devDependencies": {
+      "@types/node": "^20.10.0",
+      "@types/vscode": "^1.85.0",
+      "@vscode/vsce": "^2.22.0",
+      "typescript": "^5.3.0",
+      "vitest": "^1.0.0",
+      "@vitest/coverage-v8": "^1.0.0"
+    },
+    "commands": [
+      "vivida.diagnose",
+      "vivida.toggleHumor"
+    ],
+    "webviews": false,
+    "treeviews": false,
+    "hasTests": true
+  },
+  "vritti": {
+    "name": "vritti",
+    "isExtension": true,
+    "version": "1.0.0",
+    "dependencies": {
+      "@kanak-prabhakar/shared": "workspace:*"
+    },
+    "devDependencies": {
+      "@types/node": "^20.10.0",
+      "@types/vscode": "^1.85.0",
+      "@vscode/vsce": "^2.22.0",
+      "typescript": "^5.3.0",
+      "vitest": "^1.0.0",
+      "@vitest/coverage-v8": "^1.0.0"
+    },
+    "commands": [
+      "vritti.showDashboard",
+      "vritti.refreshMetrics"
+    ],
+    "webviews": false,
+    "treeviews": false,
+    "hasTests": true
+  },
+  "vyakhyana": {
+    "name": "vyakhyana",
+    "isExtension": true,
+    "version": "1.0.0",
+    "dependencies": {
+      "@kanak-prabhakar/shared": "workspace:*"
+    },
+    "devDependencies": {
+      "@types/node": "^20.10.0",
+      "@types/vscode": "^1.85.0",
+      "@vscode/vsce": "^2.22.0",
+      "typescript": "^5.3.0",
+      "vitest": "^1.0.0"
+    },
+    "commands": [
+      "vyakhyana.explainCode",
+      "vyakhyana.openDashboard"
+    ],
+    "webviews": false,
+    "treeviews": false,
+    "hasTests": true
+  },
+  "vyapaka": {
+    "name": "vyapaka",
+    "isExtension": true,
+    "version": "1.0.0",
+    "dependencies": {
+      "@kanak-prabhakar/shared": "workspace:*"
+    },
+    "devDependencies": {
+      "@types/node": "^20.10.0",
+      "@types/vscode": "^1.85.0",
+      "@vscode/vsce": "^2.22.0",
+      "typescript": "^5.3.0",
+      "vitest": "^1.0.0",
+      "@vitest/coverage-v8": "^1.0.0"
+    },
+    "commands": [
+      "vyapaka.diagnose",
+      "vyapaka.openDashboard",
+      "vyapaka.generateReport"
+    ],
+    "webviews": true,
+    "treeviews": true,
+    "hasTests": true
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "name": "kp-vyakhyana",
+  "displayName": "KP Vyakhyana \u2014 Code Explanation Engine",
+  "description": "Line-by-line code explanation, natural language doc generator, and concept explainer.",
+  "version": "1.0.0",
+  "publisher": "KANAKPRABHAKAR",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "vyakhyana",
+    "kanak-prabhakar",
+    "vs-code-extension"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kanak-prabhakar/vscode-extensions"
+  },
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vyakhyana.explainCode",
+        "title": "Vyakhyana: Explain Selected Code",
+        "category": "Vyakhyana"
+      },
+      {
+        "command": "vyakhyana.openDashboard",
+        "title": "Vyakhyana: Open Dashboard",
+        "category": "Vyakhyana"
+      }
+    ],
+    "configuration": {
+      "title": "Vyakhyana",
+      "properties": {
+        "vyakhyana.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable Vyakhyana features"
+        },
+        "vyakhyana.detailLevel": {
+          "type": "string",
+          "default": "comprehensive",
+          "description": "Configuration setting for detailLevel"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run build",
+    "build": "esbuild src/extension.ts --bundle --outfile=dist/extension.js --external:vscode --format=cjs --platform=node",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "package": "vsce package --no-dependencies --skip-license",
+    "clean": "rm -rf dist *.vsix"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^2.22.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  },
+  "dependencies": {
+    "@kanak-prabhakar/shared": "workspace:*"
+  }
+}

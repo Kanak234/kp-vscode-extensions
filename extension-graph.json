@@ -1,0 +1,316 @@
+{
+  "adhikarana": {
+    "name": "adhikarana",
+    "commands": [
+      "adhikarana.checkPermissions",
+      "adhikarana.openDashboard"
+    ],
+    "activationEvents": [],
+    "webviews": false,
+    "treeviews": false,
+    "dependencies": [
+      "@kanak-prabhakar/shared",
+      "minimatch"
+    ]
+  },
+  "anumana": {
+    "name": "anumana",
+    "commands": [
+      "anumana.infer",
+      "anumana.openDashboard"
+    ],
+    "activationEvents": [],
+    "webviews": false,
+    "treeviews": false,
+    "dependencies": [
+      "@kanak-prabhakar/shared"
+    ]
+  },
+  "avalokana": {
+    "name": "avalokana",
+    "commands": [
+      "avalokana.analyzeMetrics",
+      "avalokana.openDashboard"
+    ],
+    "activationEvents": [],
+    "webviews": false,
+    "treeviews": false,
+    "dependencies": [
+      "@kanak-prabhakar/shared"
+    ]
+  },
+  "darshana": {
+    "name": "darshana",
+    "commands": [
+      "darshana.showAst",
+      "darshana.openDashboard"
+    ],
+    "activationEvents": [],
+    "webviews": false,
+    "treeviews": false,
+    "dependencies": [
+      "@kanak-prabhakar/shared"
+    ]
+  },
+  "ganitha": {
+    "name": "ganitha",
+    "commands": [
+      "ganitha.evaluateExpression",
+      "ganitha.openDashboard"
+    ],
+    "activationEvents": [],
+    "webviews": false,
+    "treeviews": false,
+    "dependencies": [
+      "@kanak-prabhakar/shared"
+    ]
+  },
+  "kalpa": {
+    "name": "kalpa",
+    "commands": [
+      "kalpa.openTimeline",
+      "kalpa.compareVersion",
+      "kalpa.restorePreview",
+      "kalpa.diffLines"
+    ],
+    "activationEvents": [],
+    "webviews": false,
+    "treeviews": false,
+    "dependencies": [
+      "@kanak-prabhakar/shared"
+    ]
+  },
+  "kridaya": {
+    "name": "kridaya",
+    "commands": [
+      "kridaya.startPlayground",
+      "kridaya.toggleEffects",
+      "kridaya.configureEffects"
+    ],
+    "activationEvents": [],
+    "webviews": false,
+    "treeviews": false,
+    "dependencies": [
+      "@kanak-prabhakar/shared"
+    ]
+  },
+  "kriyasala": {
+    "name": "kriyasala",
+    "commands": [
+      "kriyasala.execute",
+      "kriyasala.openDashboard",
+      "kriyasala.stopExecution",
+      "kriyasala.restartExecution"
+    ],
+    "activationEvents": [],
+    "webviews": true,
+    "treeviews": true,
+    "dependencies": [
+      "@kanak-prabhakar/shared"
+    ]
+  },
+  "niyama": {
+    "name": "niyama",
+    "commands": [
+      "niyama.openControlCenter",
+      "niyama.searchCommands",
+      "niyama.favoriteToggle",
+      "niyama.recentClear"
+    ],
+    "activationEvents": [],
+    "webviews": false,
+    "treeviews": false,
+    "dependencies": [
+      "@kanak-prabhakar/shared"
+    ]
+  },
+  "pariksha": {
+    "name": "pariksha",
+    "commands": [
+      "pariksha.runTests",
+      "pariksha.openDashboard"
+    ],
+    "activationEvents": [],
+    "webviews": true,
+    "treeviews": true,
+    "dependencies": [
+      "@kanak-prabhakar/shared"
+    ]
+  },
+  "prayoga": {
+    "name": "prayoga",
+    "commands": [
+      "prayoga.runExperiment",
+      "prayoga.resetExperiment",
+      "prayoga.compareResults",
+      "prayoga.visualizeExperiment",
+      "prayoga.exportExperiment"
+    ],
+    "activationEvents": [],
+    "webviews": false,
+    "treeviews": false,
+    "dependencies": [
+      "@kanak-prabhakar/shared"
+    ]
+  },
+  "rachana": {
+    "name": "rachana",
+    "commands": [
+      "rachana.createProject",
+      "rachana.openDashboard"
+    ],
+    "activationEvents": [],
+    "webviews": false,
+    "treeviews": false,
+    "dependencies": [
+      "@kanak-prabhakar/shared"
+    ]
+  },
+  "samarpana": {
+    "name": "samarpana",
+    "commands": [
+      "samarpana.submitAssignment",
+      "samarpana.openDashboard"
+    ],
+    "activationEvents": [],
+    "webviews": false,
+    "treeviews": false,
+    "dependencies": [
+      "@kanak-prabhakar/shared"
+    ]
+  },
+  "sambandha": {
+    "name": "sambandha",
+    "commands": [
+      "sambandha.startSession",
+      "sambandha.openDashboard"
+    ],
+    "activationEvents": [],
+    "webviews": false,
+    "treeviews": false,
+    "dependencies": [
+      "@kanak-prabhakar/shared"
+    ]
+  },
+  "samvada": {
+    "name": "samvada",
+    "commands": [
+      "samvada.openChat",
+      "samvada.openDashboard"
+    ],
+    "activationEvents": [],
+    "webviews": false,
+    "treeviews": false,
+    "dependencies": [
+      "@kanak-prabhakar/shared"
+    ]
+  },
+  "siddhi": {
+    "name": "siddhi",
+    "commands": [
+      "siddhi.viewAchievements",
+      "siddhi.resetProgress",
+      "siddhi.exportHistory"
+    ],
+    "activationEvents": [],
+    "webviews": false,
+    "treeviews": false,
+    "dependencies": [
+      "@kanak-prabhakar/shared"
+    ]
+  },
+  "svasthya": {
+    "name": "svasthya",
+    "commands": [
+      "svasthya.checkHealth",
+      "svasthya.openDashboard"
+    ],
+    "activationEvents": [],
+    "webviews": true,
+    "treeviews": true,
+    "dependencies": [
+      "@kanak-prabhakar/shared"
+    ]
+  },
+  "tantra": {
+    "name": "tantra",
+    "commands": [
+      "tantra.generateCode",
+      "tantra.openDashboard"
+    ],
+    "activationEvents": [],
+    "webviews": false,
+    "treeviews": false,
+    "dependencies": [
+      "@kanak-prabhakar/shared"
+    ]
+  },
+  "vibhrama": {
+    "name": "vibhrama",
+    "commands": [
+      "vibhrama.analyze",
+      "vibhrama.toggleSimulation",
+      "vibhrama.mode actual",
+      "vibhrama.mode simulated"
+    ],
+    "activationEvents": [],
+    "webviews": false,
+    "treeviews": false,
+    "dependencies": [
+      "@kanak-prabhakar/shared"
+    ]
+  },
+  "vivida": {
+    "name": "vivida",
+    "commands": [
+      "vivida.diagnose",
+      "vivida.toggleHumor"
+    ],
+    "activationEvents": [],
+    "webviews": false,
+    "treeviews": false,
+    "dependencies": [
+      "@kanak-prabhakar/shared"
+    ]
+  },
+  "vritti": {
+    "name": "vritti",
+    "commands": [
+      "vritti.showDashboard",
+      "vritti.refreshMetrics"
+    ],
+    "activationEvents": [],
+    "webviews": false,
+    "treeviews": false,
+    "dependencies": [
+      "@kanak-prabhakar/shared"
+    ]
+  },
+  "vyakhyana": {
+    "name": "vyakhyana",
+    "commands": [
+      "vyakhyana.explainCode",
+      "vyakhyana.openDashboard"
+    ],
+    "activationEvents": [],
+    "webviews": false,
+    "treeviews": false,
+    "dependencies": [
+      "@kanak-prabhakar/shared"
+    ]
+  },
+  "vyapaka": {
+    "name": "vyapaka",
+    "commands": [
+      "vyapaka.diagnose",
+      "vyapaka.openDashboard",
+      "vyapaka.generateReport"
+    ],
+    "activationEvents": [],
+    "webviews": true,
+    "treeviews": true,
+    "dependencies": [
+      "@kanak-prabhakar/shared"
+    ]
+  }
+}

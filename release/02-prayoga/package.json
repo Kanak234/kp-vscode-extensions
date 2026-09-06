@@ -1,0 +1,132 @@
+{
+  "name": "prayoga",
+  "displayName": "Prayoga \u2014 Code Experiment Lab",
+  "description": "A sandbox for experimenting with code concepts including recursion, loops, memory algorithms, and syntax. Every experiment clearly indicates whether its result is actual, simulated, or educational.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "experiment",
+    "sandbox",
+    "recursion",
+    "loops",
+    "algorithms",
+    "syntax",
+    "education"
+  ],
+  "icon": "assets/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kanak-prabhakar/vscode-extensions",
+    "directory": "packages/prayoga"
+  },
+  "bugs": {
+    "url": "https://github.com/kanak-prabhakar/vscode-extensions/issues"
+  },
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "prayoga.runExperiment",
+        "title": "Prayoga: Run Experiment",
+        "category": "Prayoga"
+      },
+      {
+        "command": "prayoga.resetExperiment",
+        "title": "Prayoga: Reset Experiment",
+        "category": "Prayoga"
+      },
+      {
+        "command": "prayoga.compareResults",
+        "title": "Prayoga: Compare Results",
+        "category": "Prayoga"
+      },
+      {
+        "command": "prayoga.visualizeExperiment",
+        "title": "Prayoga: Visualize",
+        "category": "Prayoga"
+      },
+      {
+        "command": "prayoga.exportExperiment",
+        "title": "Prayoga: Export",
+        "category": "Prayoga"
+      }
+    ],
+    "configuration": {
+      "title": "Prayoga",
+      "properties": {
+        "prayoga.enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable Prayoga code experiment lab"
+        },
+        "prayoga.experiment.type": {
+          "type": "string",
+          "enum": [
+            "recursion",
+            "loop",
+            "memory",
+            "algorithm",
+            "syntax",
+            "performance"
+          ],
+          "default": "recursion",
+          "description": "Type of experiment to run"
+        },
+        "prayoga.results.mode": {
+          "type": "string",
+          "enum": [
+            "actual",
+            "simulated",
+            "educational"
+          ],
+          "default": "educational",
+          "description": "Result mode for experiments"
+        }
+      }
+    },
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "prayoga.runExperiment",
+          "when": "prayoga.enabled"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "prayoga.runExperiment",
+          "group": "prayoga",
+          "when": "prayoga.enabled"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run build",
+    "build": "tsc -p tsconfig.json",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "package": "vsce package --no-dependencies",
+    "clean": "rm -rf dist *.vsix"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^2.22.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0",
+    "@vitest/coverage-v8": "^1.0.0"
+  },
+  "dependencies": {
+    "@kanak-prabhakar/shared": "workspace:*"
+  },
+  "publisher": "kanak-prabhakar"
+}

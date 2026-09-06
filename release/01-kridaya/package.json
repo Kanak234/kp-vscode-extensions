@@ -1,0 +1,124 @@
+{
+  "name": "kridaya",
+  "displayName": "Kridaya \u2014 Developer Playground",
+  "description": "A playful coding environment inside VS Code with visual feedback, reactions, and configurable visual effects. Makes programming more enjoyable while preserving actual developer value.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "playground",
+    "visual feedback",
+    "reactions",
+    "effects",
+    "challenges",
+    "developer"
+  ],
+  "icon": "assets/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kanak-prabhakar/vscode-extensions",
+    "directory": "packages/kridaya"
+  },
+  "bugs": {
+    "url": "https://github.com/kanak-prabhakar/vscode-extensions/issues"
+  },
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "kridaya.startPlayground",
+        "title": "Kridaya: Start Playground",
+        "category": "Kridaya"
+      },
+      {
+        "command": "kridaya.toggleEffects",
+        "title": "Kridaya: Toggle Visual Effects",
+        "category": "Kridaya"
+      },
+      {
+        "command": "kridaya.configureEffects",
+        "title": "Kridaya: Configure Effects",
+        "category": "Kridaya"
+      }
+    ],
+    "configuration": {
+      "title": "Kridaya",
+      "properties": {
+        "kridaya.enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable Kridaya developer playground"
+        },
+        "kridaya.effects.enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable visual effects"
+        },
+        "kridaya.effects.intensity": {
+          "type": "number",
+          "default": 0.5,
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Effect intensity (0-1)"
+        },
+        "kridaya.effects.reduceMotion": {
+          "type": "boolean",
+          "default": false,
+          "description": "Reduce motion for accessibility"
+        },
+        "kridaya.sound.enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable sound effects"
+        }
+      }
+    },
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "kridaya.startPlayground",
+          "when": "kridaya.enabled"
+        },
+        {
+          "command": "kridaya.toggleEffects",
+          "when": "kridaya.enabled"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "kridaya.startPlayground",
+          "group": "kridaya",
+          "when": "kridaya.enabled"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run build",
+    "build": "tsc -p tsconfig.json",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "package": "vsce package --no-dependencies",
+    "clean": "rm -rf dist *.vsix"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^2.22.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0",
+    "@vitest/coverage-v8": "^1.0.0"
+  },
+  "dependencies": {
+    "@kanak-prabhakar/shared": "workspace:*"
+  },
+  "publisher": "kanak-prabhakar"
+}

@@ -1,0 +1,121 @@
+{
+  "name": "kp-vibhrama",
+  "displayName": "KP Vibhrama \u2014 Execution Illusion Lab",
+  "description": "Visually impressive explanations of what code is doing, including function calls, loops, branches, objects, arrays, and memory concepts. The extension clearly distinguishes actual execution from visual simulation and never claims a simulation is the actual CPU/runtime state.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "execution",
+    "visualization",
+    "flow",
+    "debug",
+    "simulation",
+    "education"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kanak-prabhakar/vscode-extensions",
+    "directory": "packages/vibhrama"
+  },
+  "bugs": {
+    "url": "https://github.com/kanak-prabhakar/vscode-extensions/issues"
+  },
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vibhrama.analyze",
+        "title": "Vibhrama: Analyze Execution",
+        "category": "Vibhrama"
+      },
+      {
+        "command": "vibhrama.toggleSimulation",
+        "title": "Vibhrama: Toggle Simulation",
+        "category": "Vibhrama"
+      },
+      {
+        "command": "vibhrama.mode actual",
+        "title": "Vibhrama: Actual Execution Mode",
+        "category": "Vibhrama"
+      },
+      {
+        "command": "vibhrama.mode simulated",
+        "title": "Vibhrama: Simulation Mode",
+        "category": "Vibhrama"
+      }
+    ],
+    "configuration": {
+      "title": "Vibhrama",
+      "properties": {
+        "vibhrama.enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable Vibhrama execution illusion lab"
+        },
+        "vibhrama.simulation.enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable visual simulation"
+        },
+        "vibhrama.simulation.reduceMotion": {
+          "type": "boolean",
+          "default": false,
+          "description": "Reduce motion for accessibility"
+        },
+        "vibhrama.mode": {
+          "type": "string",
+          "enum": [
+            "actual",
+            "simulated"
+          ],
+          "default": "actual",
+          "description": "Display mode: actual or simulated"
+        }
+      }
+    },
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "vibhrama.analyze",
+          "when": "vibhrama.enabled"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "vibhrama.analyze",
+          "group": "vibhrama",
+          "when": "vibhrama.enabled"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run build",
+    "build": "esbuild src/extension.ts --bundle --outfile=dist/extension.js --external:vscode --format=cjs --platform=node",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "package": "vsce package --no-dependencies --skip-license",
+    "clean": "rm -rf dist *.vsix"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^2.22.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0",
+    "@vitest/coverage-v8": "^1.0.0"
+  },
+  "dependencies": {
+    "@kanak-prabhakar/shared": "workspace:*"
+  },
+  "publisher": "KANAKPRABHAKAR"
+}
