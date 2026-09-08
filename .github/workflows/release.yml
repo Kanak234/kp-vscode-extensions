@@ -14,13 +14,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      # This repository declares packageManager: pnpm@8.10.0 and is a pnpm
+      # workspace (pnpm-workspace.yaml), and ci.yml installs with pnpm. This
+      # job used npm, which cannot build it: the committed package-lock.json
+      # is stale (esbuild 0.21.5 against the required 0.28.2) so `npm ci`
+      # fails outright, and package.json declares no npm "workspaces" field,
+      # so the `npm install` fallback would not link the packages/* that
+      # `pnpm run build` filters over.
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 8.10.0
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
+          cache: pnpm
       - name: Build Production Bundle
         run: |
-          npm ci || npm install
-          npm run build
+          pnpm install --frozen-lockfile
+          pnpm run build
           tar -czf release-bundle.tar.gz --exclude='.git' --exclude='node_modules' .
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
